@@ -6,7 +6,7 @@
 			"sources": [
 				{
 					"dataset": {
-						"referenceName": "Invoice1",
+						"referenceName": "Invoice2",
 						"type": "DatasetReference"
 					},
 					"name": "ReadInvoices"
