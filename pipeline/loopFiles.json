@@ -227,8 +227,23 @@
 						"df_name": "@{pipeline().DataFactory}"
 					}
 				}
+			},
+			{
+				"name": "ForEach2",
+				"type": "ForEach",
+				"dependsOn": [],
+				"userProperties": []
 			}
 		],
+		"parameters": {
+			"RecipientList": {
+				"type": "array",
+				"defaultValue": [
+					"danieldivergence.test@outlook.com",
+					"daniel.ewing23@yahoo.com"
+				]
+			}
+		},
 		"annotations": []
 	}
 }
