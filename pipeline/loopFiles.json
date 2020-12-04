@@ -211,7 +211,13 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"method": "POST"
+					"method": "POST",
+					"body": {
+						"recipient": "divergencetest@outlook.com",
+						"run_id": "@{pipeline().RunId}",
+						"trigger_time": "@{pipeline().TriggerTime}",
+						"df_name": "@{pipeline().DataFactory}"
+					}
 				}
 			}
 		],
