@@ -201,7 +201,14 @@
 			{
 				"name": "Web1",
 				"type": "WebActivity",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "ForEach1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "7.00:00:00",
 					"retry": 0,
@@ -211,9 +218,10 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
+					"url": "https://prod-06.southcentralus.logic.azure.com:443/workflows/5ca2e9e9980a4a89808e194cf461424b/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=_hyF8av7ATqsYV-n3v9PRDSKIKnln42yjSqxKYp5eng",
 					"method": "POST",
 					"body": {
-						"recipient": "divergencetest@outlook.com",
+						"recipient": "danieldivergence.test@outlook.com",
 						"run_id": "@{pipeline().RunId}",
 						"trigger_time": "@{pipeline().TriggerTime}",
 						"df_name": "@{pipeline().DataFactory}"
